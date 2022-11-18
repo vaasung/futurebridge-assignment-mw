@@ -1,8 +1,7 @@
-const { Client, Pool } = require('pg');
+const { Pool } = require('pg');
+require('dotenv').config()
 
-// must got to env
-const connectionString =
-  'postgres://ehkyzepv:d_n3cmdbG-v-8S68-bXAAy6Fd5UQNQLV@peanut.db.elephantsql.com/ehkyzepv';
+const { connectionString } = process.env;
 
 const pool = new Pool({ connectionString });
 
